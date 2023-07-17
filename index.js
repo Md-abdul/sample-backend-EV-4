@@ -19,6 +19,10 @@ const connect = async () => {
   }
 };
 
+app.get("/", (req,res) => {
+  res.send("Welcome to homePage!!")
+})
+
 app.use("/users", userRouter);
 app.use("/posts", auth, postRouter);
 app.listen(2010, () => {
