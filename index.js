@@ -12,7 +12,7 @@ app.use(cors());
 
 const connect = async () => {
   try {
-    await mongoose.connect(process.env.MONGOOSE_URL);
+    await mongoose.connect(process.env.MONGOOSE_URI);
     console.log("Connected");
   } catch (error) {
     console.log(error);
@@ -25,9 +25,10 @@ app.get("/", (req,res) => {
 
 app.use("/users", userRouter);
 app.use("/posts", auth, postRouter);
-app.listen(2010, () => {
+app.listen(2011, () => {
   connect();
   console.log("server is running");
 });
 
 // mongodb+srv://mdabdulq62:nadim123@cluster0.mjympox.mongodb.net/abdulusers?retryWrites=true&w=majority
+///sfkjsdklfkldsjflkd
