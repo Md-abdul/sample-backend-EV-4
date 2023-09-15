@@ -24,7 +24,7 @@ app.get("/", (req,res) => {
 })
 
 app.use("/users", userRouter);
-app.use("/posts", auth, postRouter);
+app.use("/posts",  postRouter);
 app.listen(2011, () => {
   connect();
   console.log("server is running");
